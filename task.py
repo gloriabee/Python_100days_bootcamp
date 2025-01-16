@@ -1,4 +1,8 @@
-print('Welcome to the Band Name Generator.')
-city=input("What's the name of the city you grew up in?\n")
-pet=input("What's your pet's name?\n")
-print('Your band name could be '+city+' '+pet)
+# BMI Calculator
+
+weight=float(input('Enter your weight\n'))
+height=float(input('Enter your height\n'))
+bmi=weight/(height**2)
+print('BMI is ', bmi)
+
+
