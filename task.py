@@ -1,7 +1,11 @@
-print('Welcome to the rollercoaster!')
-height=int(input('What is your height in cm?'))
+# Modulo Operator
 
-if height==120:
-    print('Can ride')
+# print(10%3)
+
+#Check add or even
+
+num=int(input('Enter the number\n'))
+if(num%2==0):
+    print(f'{num} is even number')
 else:
-    print('Cannot ride')
+    print(f'{num} is odd number')
