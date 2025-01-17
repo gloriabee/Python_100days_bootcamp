@@ -1,11 +1,19 @@
-#BMI Calculator with Interpretations
+height=int(input('Enter your height'))
+if(height>120):
+    print('can ride')
+    pay=0
+    age=int(input('Enter your age'))
+    if(age>18):
+        pay+=12
+    elif(age>12):
+        pay+=7
+    else:
+        pay+=5
+    photo=input('Want photos?')
+    if(photo=='yes'):
+        pay+=3
+        print('The total pay is $',pay)
 
-weight=float(input('Enter your weight\n'))
-height=float(input('Enter your height\n'))
-bmi=weight/(height**2)
-if bmi>=25:
-    print('overweight')
-elif bmi>=18.5:
-    print('normal weight')
+    print('The total pay is $',pay)   
 else:
-    print('underweight')
+    print("can't ride")
