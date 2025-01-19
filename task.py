@@ -1,7 +1,8 @@
-student_scores=[10,340,22,34,300,210,33]
-print(sum(student_scores))
+student_scores=[10,30,22,34,300,210,33]
+print(max(student_scores))
 
-sum=0
+max=student_scores[0]
 for score in student_scores:
-    sum+=score
-print(sum)
+   if score>max:
+        max=score
+print(max)
