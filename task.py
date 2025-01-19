@@ -1,8 +1,5 @@
-student_scores=[10,30,22,34,300,210,33]
-print(max(student_scores))
+total=0
+for num in range(1,101):
+    total+=num
 
-max=student_scores[0]
-for score in student_scores:
-   if score>max:
-        max=score
-print(max)
+print(total)
