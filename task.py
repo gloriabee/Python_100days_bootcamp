@@ -1,11 +1,9 @@
-def greet():
-    print('Hello')
 
-def greetWithName(name):
-    print('Hello ',name)
-    print('Hello ',name)
-    print('Hello ',name)
+def life_in_weeks(age):
+    left_years=90-age
+    left_weeks=left_years*52
+    print(f'You have {left_weeks} weeks left.')
 
-greetWithName('Gloria')
-greet()
+age=int(input('Enter your current age: '))
+life_in_weeks(age)
 
