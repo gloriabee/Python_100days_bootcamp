@@ -1,9 +1,5 @@
+def greet_with(name,location):
+    print(f'Hello {name}')
+    print(f'What is it like in {location}')
 
-def life_in_weeks(age):
-    left_years=90-age
-    left_weeks=left_years*52
-    print(f'You have {left_weeks} weeks left.')
-
-age=int(input('Enter your current age: '))
-life_in_weeks(age)
-
+greet_with(location='nowhere',name='gloria')
