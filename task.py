@@ -1,23 +1,25 @@
-def calculate_love_score(name1,name2):
-    result=name1+name2
-    lower_names= result.lower()
-    tcount=lower_names.count('t')
-    rcount=lower_names.count('r')
-    ucount=lower_names.count('u')
-    ecount=lower_names.count('e')
-    totalTrue=tcount+rcount+ucount+ecount
+import string
+def cipher(choice):
+   msg=input('Type your message:\n')
+   shift=int(input('Type the shift number:\n'))
+   if(choice=='encode'):
+    print("Here's the encoded result: ")
+   else:
+    print("Here's the decoded result: ") 
 
-    lcount=lower_names.count('l')
-    ocount=lower_names.count('o')
-    vcount=lower_names.count('v')
-    ecount=lower_names.count('e')
-    totalLove=lcount+ocount+vcount+ecount
+alphabet=string.ascii_lowercase+string.ascii_uppercase+string.punctuation
+choice=input("Type 'encode' to encrypt,type 'decode' to decrypt:\n")
+isEnd=False
+while not isEnd:
+  cipher(choice)
+  decision=input("Type 'yes' if you want to go again, Otherwise type 'no'\n")
+  if(decision=='no'):
+    isEnd=True
+  else:
+    isEnd=False
 
-    print(f"Love score = {totalTrue}{totalLove}")
-
-calculate_love_score('kanye West','kim kardashian')
-
-
+print(alphabet)
+    
 
 
 
