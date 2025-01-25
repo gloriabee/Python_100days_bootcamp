@@ -1,41 +1,26 @@
-import string
-alphabet=string.ascii_lowercase+string.ascii_uppercase+string.punctuation
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+student_grades={}
 
-# encrypt function
-def encrypt(msg,shift):
-  cipher_text=""
-  for char in msg:
-    shifted_position=alphabet.index(char)+shift
-    shifted_position%=len(alphabet)
-    cipher_text+=alphabet[shifted_position]
-  print(f"Here is the encoded result: {cipher_text}")
+def score_to_grade(score):
+   if(score>90 and score<=100):
+      grade='Outstanding'
+   elif(score>80 and score<=90):
+      grade='Exceeds Expectations'
+   elif(score>70 and score<=80):
+      grade='Acceptable'
+   else:
+      grade='Fail'
+   return grade
+      
 
+for name in student_scores:
+   score=student_scores[name]
+   student_grades[name]=score_to_grade(score)
 
-# decrypt 
-def decrypt(msg,shift):
-   cipher_text=""
-   for char in msg:
-      shifted_position=alphabet.index(char)-shift
-      cipher_text+=alphabet[shifted_position]
-   print(f"Here is the decoded result: {cipher_text}")
-
-
-isEnd=False
-while not isEnd:
-     choice=input("Type 'encode' to encrypt,type 'decode' to decrypt:\n").lower()
-     msg=input('Type your message:\n').lower()
-     shift=int(input('Type the shift number:\n'))
-     if(choice=='encode'):
-        encrypt(msg,shift)
-     else:
-        decrypt(msg,shift)
-     decision=input("Type 'yes' if you want to go again, Otherwise type 'no'\n")
-     if(decision=='no'):
-        isEnd=True
-     else:
-        isEnd=False
-
-    
-
-
-
+print(student_grades)
