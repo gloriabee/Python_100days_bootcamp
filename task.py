@@ -1,4 +1,18 @@
-def format_name(f_name,l_name):
-   return f_name.title()+' '+l_name.title()
 
-print(format_name('gloria win','nyunt'))
+def isLeap(year):
+   if(year%4==0):
+      if(year%100==0):
+         if(year%400==0):
+            return True
+         else:
+            return False
+      else:
+         return True
+   else:
+     return False
+
+year=int(input('Enter the year: '))
+print(isLeap(year))
+
+
+
