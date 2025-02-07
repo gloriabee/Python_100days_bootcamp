@@ -1,10 +1,8 @@
-def is_prime(num):
-    if num==2:
-        return True
-    if num==1:
-        return False
-    for i in range(2,num):
-        if num%i==0:
-            return False
-    return True
-print(is_prime(7))
+try:
+    age=int(input('How old are you?'))
+except ValueError:
+    print("You typed invalid number. please try again")
+    age=int(input('How old are you?'))
+
+    if(age>18):
+        print(f'You can drive at age {age}')
